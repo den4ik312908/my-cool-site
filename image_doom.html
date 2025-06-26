@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мій сайт</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    picture svg {
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER з черепашкою -->
+  <header>
+    <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#4CAF50">
+      <path d="M48 36c0 6.63-5.37 12-12 12-2.08 0-4.04-.52-5.75-1.45-.68 1.09-1.53 2.07-2.52 2.89C29.63 51.3 32 56.06 32 56h-4s-1.71-2.29-3.52-4.41C21.71 53.71 16 56 16 56s2.1-4.03 3.69-6.31A11.964 11.964 0 0 1 12 36c0-6.63 5.37-12 12-12h12c6.63 0 12 5.37 12 12z"/>
+      <circle cx="46" cy="24" r="4" fill="#4CAF50"/>
+    </svg>
+    <h1>Мій сайт</h1>
+  </header>
+
+  <!-- ADAPTIVE SVG ЗОБРАЖЕННЯ (коло/квадрат) -->
+  <picture>
+    <!-- Квадрат — для десктопів (понад 768px) -->
+    <source media="(min-width: 769px)" type="image/svg+xml" 
+      srcset="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+          <rect width='100' height='100' fill='orange'/>
+        </svg>">
+
+    <!-- Коло — для мобільних (до 768px) -->
+   <picture>
+  <source srcset="square.svg" media="(min-width: 769px)">
+  <source srcset="circle.svg" media="(max-width: 768px)">
+  <img src="square.svg" alt="Лого">
+   </picture>
+
+</body>
+</html>
