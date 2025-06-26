@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Мій сайт</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -42,21 +43,21 @@
     <h1>Мій сайт</h1>
   </header>
 
+  <div class="visual">
   <!-- ADAPTIVE SVG ЗОБРАЖЕННЯ (коло/квадрат) -->
-  <picture>
-    <!-- Квадрат — для десктопів (понад 768px) -->
-    <source media="(min-width: 769px)" type="image/svg+xml" 
-      srcset="data:image/svg+xml;utf8,
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-          <rect width='100' height='100' fill='orange'/>
-        </svg>">
-
-    <!-- Коло — для мобільних (до 768px) -->
-   <picture>
-  <source srcset="square.svg" media="(min-width: 769px)">
-  <source srcset="circle.svg" media="(max-width: 768px)">
-  <img src="square.svg" alt="Лого">
+    <picture>
+      <source srcset="../images/square.svg" media="(min-width: 769px)">
+      
+      <img src="../images/circle-fill.svg" alt="Лого">
    </picture>
+  </div>
 
+  <div class="visual visual__extra">
+      <picture>
+         <source srcset="../images/square.svg" media="(max-width: 769px)">
+        <img src="../images/bee.jpg" alt="bee">
+      </picture>
+  </div>
+   
 </body>
 </html>
