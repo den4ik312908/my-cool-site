@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шрифти, Розміри, Кольори</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Використовуємо підключений шрифт */
+            margin: 40px;
+            color: #333; /* Базовий колір тексту для всього body */
+        }
+
+        h1 {
+            font-family: "Georgia", serif; /* Інший шрифт для заголовка */
+            font-size: 3em; /* Розмір відносно базового */
+            color: #2c3e50; /* Темний майже чорний */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 2rem; /* Розмір відносно HTML кореня */
+            color: #1abc9c; /* Яскравий бірюзовий */
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6; /* Міжрядковий інтервал для кращої читабельності */
+            color: #666; /* Трохи світліший сірий */
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            font-size: 1.2em;
+            color: #e74c3c; /* Червоний для виділеного тексту */
+            font-weight: bold; /* Жирний шрифт */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мій Заголовок Сторінки</h1>
+
+    <p>Це <span class="highlight-text">основний текст</span> моєї сторінки. Я експериментую з різними <span class="highlight-text">шрифтами</span>, <span class="highlight-text">розмірами</span> та <span class="highlight-text">кольорами</span>, щоб покращити візуальне сприйняття.</p>
+
+    <h2>Підзаголовок Секції</h2>
+
+    <p>Тут знаходиться додаткова інформація. Зверніть увагу, як <span style="font-family: 'Courier New', monospace; color: purple;">змінюється шрифт</span> для різних елементів, надаючи їм унікальний вигляд.</p>
+
+    <p>Ми використовуємо відносні одиниці виміру, такі як <span class="highlight-text">`em`</span> та <span class="highlight-text">`rem`</span>, для кращої адаптивності на різних пристроях. Це дозволяє тексту масштабуватися відповідно до розміру екрана користувача.</p>
+
+</body>
+</html>
