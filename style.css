@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.flex-container {
+    display: flex; /* Робить контейнер Flex-контейнером */
+    border: 2px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    min-height: 100px; /* Додаємо мінімальну висоту для демонстрації вирівнювання по вертикалі */
+    gap: 10px; /* Додає проміжки між елементами */
+}
+
+.flex-item {
+    background-color: #6a0dad; /* Глибокий фіолетовий */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 5px;
+    flex-grow: 0; /* Запобігає зростанню елементів за замовчуванням */
+    flex-shrink: 0; /* Запобігає зменшенню елементів за замовчуванням */
+    flex-basis: auto; /* Базовий розмір елемента */
+    min-width: 80px; /* Мінімальна ширина для кращої візуалізації */
+}
+
+/* --- Властивості align-items (вирівнювання елементів по поперечній осі - зазвичай вертикалі) --- */
+
+.align-start {
+    align-items: flex-start; /* Вирівнює елементи до початку поперечної осі */
+}
+
+.align-end {
+    align-items: flex-end; /* Вирівнює елементи до кінця поперечної осі */
+}
+
+.align-center {
+    align-items: center; /* Вирівнює елементи по центру поперечної осі */
+}
+
+.align-stretch {
+    align-items: stretch; /* Розтягує елементи, щоб заповнити контейнер по поперечній осі (якщо їх висота не встановлена) */
+}
+
+.align-baseline {
+    align-items: baseline; /* Вирівнює елементи по їхній текстовій базовій лінії */
+}
+
+/* --- Властивості justify-content (вирівнювання елементів по головній осі - зазвичай горизонталі) --- */
+
+.justify-start {
+    justify-content: flex-start; /* Вирівнює елементи до початку головної осі */
+}
+
+.justify-end {
+    justify-content: flex-end; /* Вирівнює елементи до кінця головної осі */
+}
+
+.justify-center {
+    justify-content: center; /* Вирівнює елементи по центру головної осі */
+}
+
+.justify-between {
+    justify-content: space-between; /* Рівномірно розподіляє простір між елементами (перший на початку, останній в кінці) */
+}
+
+.justify-around {
+    justify-content: space-around; /* Рівномірно розподіляє простір навколо елементів (простір на початку і в кінці вдвічі менший, ніж між елементами) */
+}
+
+.justify-evenly {
+    justify-content: space-evenly; /* Рівномірно розподіляє простір навколо і між елементами */
+}
+
+/* --- Комбіновані приклади та індивідуальне вирівнювання елементів --- */
+
+.mixed-alignment {
+    align-items: center; /* Центруємо по вертикалі за замовчуванням */
+    justify-content: space-around; /* Розподіляємо по горизонталі */
+    min-height: 150px;
+}
+
+.block-a {
+    background-color: #ff5733; /* Помаранчевий */
+    align-self: flex-start; /* Перезаписує align-items для цього елемента */
+}
+
+.block-b {
+    background-color: #33ff57; /* Зелений */
+}
+
+.block-c {
+    background-color: #3357ff; /* Синій */
+    align-self: flex-end; /* Перезаписує align-items для цього елемента */
+}
