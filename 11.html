@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проста Сітка Flexbox</title>
+    <style>
+        .flex-container {
+            display: flex; /* Вмикаємо Flexbox */
+            flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
+            gap: 20px; /* Відстань між елементами */
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .flex-item {
+            flex: 1 1 calc(33.33% - 40px/3*2); /* Для трьох стовпців з урахуванням відступів */
+            /* flex-basis: calc(33.33% - 20px); */ /* Альтернатива: базова ширина елемента */
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.2em;
+            box-sizing: border-box; /* Важливо для розрахунків ширини з padding */
+        }
+
+        /* Додаткові налаштування для окремих елементів (необов'язково) */
+        .flex-item:nth-child(1) {
+            background-color: #f44336;
+        }
+
+        .flex-item:nth-child(2) {
+            background-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Проста Сітка за допомогою Flexbox</h1>
+    <div class="flex-container">
+        <div class="flex-item">Елемент 1</div>
+        <div class="flex-item">Елемент 2</div>
+        <div class="flex-item">Елемент 3</div>
+        <div class="flex-item">Елемент 4</div>
+        <div class="flex-item">Елемент 5</div>
+        <div class="flex-item">Елемент 6</div>
+    </div>
+</body>
+</html>
