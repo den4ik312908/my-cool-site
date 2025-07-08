@@ -1,0 +1,109 @@
+/* --- Базові стилі (для великих екранів або за замовчуванням) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem; /* 40px */
+}
+
+.content-box {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    font-size: 2rem; /* 32px */
+}
+
+p {
+    font-size: 1.1rem; /* 17.6px */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* --- Медіа-запити для адаптації під різні розміри екранів --- */
+
+/* Запит для екранів шириною до 768px (наприклад, більшість планшетів і великі телефони) */
+/* Використовуємо 'max-width', що означає "якщо ширина вікна **менше або дорівнює** 768px" */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Зменшуємо заголовок на планшетах */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Зменшуємо підзаголовок */
+    }
+
+    .content-box {
+        margin: 15px; /* Зменшуємо зовнішні відступи */
+        padding: 20px; /* Зменшуємо внутрішні відступи */
+    }
+
+    p {
+        font-size: 1rem; /* Зменшуємо розмір тексту */
+    }
+
+    footer {
+        position: static; /* Футер більше не прилипає до низу на маленьких екранах */
+        padding: 15px;
+    }
+}
+
+/* Запит для екранів шириною до 480px (більшість смартфонів) */
+/* Це ще менший розмір, тому стилі тут будуть ще більш адаптованими під мобільні */
+@media (max-width: 480px) {
+    body {
+        background-color: #e0e7ee; /* Змінюємо колір фону для візуалізації */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ще менший заголовок для смартфонів */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center; /* Центруємо підзаголовок */
+    }
+
+    .content-box {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 5px; /* Трохи менший радіус */
+    }
+
+    p {
+        font-size: 0.9rem; /* Ще менший розмір тексту */
+        text-align: justify; /* Вирівнюємо текст по ширині */
+    }
+
+    header, footer {
+        padding: 10px 0;
+    }
+}
