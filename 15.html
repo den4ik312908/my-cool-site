@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклад Футера</title>
+    <header>
+        <picture>
+            <source srcset="../images/large.svg" media="(min-width: 769px)">
+            <img src="../images/icon.svg" alt="Іконка">
+        </picture>
+
+    </header>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh; /* Забезпечує, що футер буде внизу сторінки, якщо контенту мало */
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1; /* Основний контент займає весь доступний простір */
+            padding: 20px;
+        }
+        footer {
+            font-size: 18px;
+            padding: 20px;
+            background-color: #f2f2f2; /* Для наочності футера */
+            color: #333;
+            text-align: center; /* Центруємо текст на великих екранах */
+        }
+
+        /* Для мобільних екранів */
+        @media (max-width: 768px) {
+            footer {
+                font-size: 14px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Основний вміст сторінки</h1>
+        <p>Тут розташовуватиметься весь ваш основний контент.</p>
+        <p>Прокрутіть до низу, щоб побачити футер.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Мій Сайт. Всі права захищені.</p>
+        <p>Зв'яжіться з нами: <a href="mailto:info@mysite.com">info@mysite.com</a></p>
+    </footer>
+
+</body>
+</html>
